@@ -17,7 +17,6 @@
       --text: #f0e6e0;
       --text-soft: #b8a8a0;
       --bordeaux: #8b1a3a;
-      --bordeaux-light: rgba(139,26,58,0.15);
       --gold: #c9a96e;
       --gold-light: rgba(201,169,110,0.2);
       --radius: 24px;
@@ -37,11 +36,8 @@
       position: relative;
     }
 
-    h1, h2, h3, .logo-text {
-      font-family: 'Cormorant Garamond', serif;
-    }
+    h1, h2, h3, .logo-text { font-family: 'Cormorant Garamond', serif; }
 
-    /* Animated deep background */
     body::before {
       content: '';
       position: fixed;
@@ -52,7 +48,6 @@
                   radial-gradient(ellipse at 50% 50%, rgba(45,27,27,0.8) 0%, #0d0b14 100%);
     }
 
-    /* Header */
     .topbar {
       position: absolute;
       top: 0; left: 0; right: 0;
@@ -80,10 +75,7 @@
       flex-shrink: 0;
       box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     }
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-    }
+    .brand-text { display: flex; flex-direction: column; }
     .brand-text .logo-text {
       font-size: 1.5rem;
       font-weight: 700;
@@ -114,7 +106,6 @@
     }
     .hamburger div:nth-child(2) { width: 70%; margin-left: auto; }
 
-    /* Menu Overlay */
     .nav-overlay {
       position: fixed;
       top: 0; right: 0;
@@ -161,7 +152,6 @@
     }
     .nav-overlay a:hover::after { width: 100%; }
 
-    /* Hero */
     .hero-section {
       position: relative;
       min-height: 100vh;
@@ -176,7 +166,7 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background: url('hero.jpg') center/cover no-repeat;
+      background: url('hero.jpg') center/cover no-repeat, #1a0f14;
       filter: brightness(0.4) saturate(0.8);
       z-index: 0;
     }
@@ -186,7 +176,7 @@
       width: 100%;
       max-width: 900px;
       padding: 0 20px;
-      margin: 0 0 32px;
+      margin: 0 0 48px;
       text-align: center;
     }
     .hero-content h1 {
@@ -195,17 +185,9 @@
       font-weight: 300;
       line-height: 1.3;
       color: #fff;
-      margin-bottom: 16px;
+      margin-bottom: 32px;
       letter-spacing: 6px;
       text-transform: uppercase;
-    }
-    .hero-content p {
-      font-size: 1rem;
-      color: rgba(255,255,255,0.75);
-      max-width: 520px;
-      margin: 0 auto 40px;
-      font-weight: 300;
-      line-height: 1.8;
     }
     .btn-main {
       padding: 16px 36px;
@@ -240,7 +222,6 @@
       background: rgba(201,169,110,0.08);
     }
 
-    /* Section styling */
     .section {
       padding: 100px 28px;
       max-width: 1200px;
@@ -256,12 +237,6 @@
       margin-bottom: 12px;
       color: #fff;
     }
-    .section-header p {
-      color: var(--text-soft);
-      font-size: 1rem;
-      max-width: 500px;
-      margin: 0 auto;
-    }
     .divider {
       width: 48px;
       height: 2px;
@@ -270,7 +245,6 @@
       border-radius: 2px;
     }
 
-    /* Glass cards */
     .glass-card {
       background: var(--glass);
       backdrop-filter: blur(20px);
@@ -281,7 +255,6 @@
       box-shadow: 0 8px 32px rgba(0,0,0,0.2);
     }
 
-    /* Services / Pricing */
     .price-wrap {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -290,7 +263,6 @@
     .price-box {
       background: var(--glass);
       backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
       border: 1px solid var(--glass-border);
       border-radius: var(--radius-sm);
       padding: 36px 28px;
@@ -336,7 +308,6 @@
       font-style: italic;
     }
 
-    /* Master Maria highlight */
     .master-highlight {
       background: linear-gradient(135deg, rgba(139,26,58,0.2), rgba(201,169,110,0.1));
       border: 1px solid rgba(201,169,110,0.2);
@@ -358,7 +329,6 @@
       margin-bottom: 32px;
     }
 
-    /* Section labels */
     .section-label {
       font-family: 'Cormorant Garamond', serif;
       font-size: 0.75rem;
@@ -389,18 +359,6 @@
       letter-spacing: 1px;
     }
 
-    /* About */
-    .about-text {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.3rem, 3vw, 1.8rem);
-      font-weight: 300;
-      line-height: 1.5;
-      color: var(--text);
-      max-width: 700px;
-      margin: 0 auto 40px;
-      text-align: center;
-      letter-spacing: 1px;
-    }
     #about img {
       width: 100%;
       max-width: 800px;
@@ -412,7 +370,6 @@
       border: 1px solid var(--glass-border);
     }
 
-    /* Hero side buttons */
     .hero-side-btns {
       position: fixed;
       right: 20px;
@@ -431,7 +388,6 @@
       color: #fff;
       text-decoration: none;
       backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
       border: 1px solid rgba(255,255,255,0.2);
       box-shadow: 0 8px 32px rgba(0,0,0,0.3);
       transition: all 0.3s ease;
@@ -445,7 +401,6 @@
     .hero-side-wa { background: rgba(37,211,102,0.15); border-color: rgba(37,211,102,0.4); }
     .hero-side-wa:hover { background: rgba(37,211,102,0.25); }
 
-    /* Reveal */
     .fade-in {
       opacity: 0;
       transform: translateY(30px);
@@ -463,10 +418,7 @@
       .hero-side-btn { width: 48px; height: 48px; }
       .hero-side-btns { right: 16px; bottom: 16px; gap: 10px; }
       .hero-content > div { flex-direction: column; align-items: center; }
-
     }
-    
-    
     @media (max-width: 600px) {
       .glass-card { padding: 28px 20px; }
       .price-box { padding: 28px 20px; }
@@ -475,38 +427,33 @@
 </head>
 <body>
 
-  <!-- HEADER -->
   <header class="topbar">
     <a href="#" class="brand">
       <div class="brand-mark">
-        <!-- Matryoshka SVG Logo -->
         <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
           <ellipse cx="50" cy="95" rx="30" ry="5" fill="rgba(201,169,110,0.3)"/>
-          <!-- Outer doll -->
-          <path d="M20 85 C20 40 30 20 50 15 C70 20 80 40 80 85 Z" fill="url(#grad1)" stroke="#c9a96e" stroke-width="1.5"/>
+          <path d="M20 85 C20 40 30 20 50 15 C70 20 80 40 80 85 Z" fill="url(#g1)" stroke="#c9a96e" stroke-width="1.5"/>
           <path d="M20 55 Q50 65 80 55" stroke="#c9a96e" stroke-width="1" fill="none" opacity="0.5"/>
-          <circle cx="50" cy="38" r="14" fill="url(#grad2)" stroke="#c9a96e" stroke-width="1"/>
+          <circle cx="50" cy="38" r="14" fill="url(#g2)" stroke="#c9a96e" stroke-width="1"/>
           <path d="M38 32 Q50 28 62 32" stroke="#c9a96e" stroke-width="1" fill="none"/>
           <circle cx="44" cy="40" r="2" fill="#c9a96e"/>
           <circle cx="56" cy="40" r="2" fill="#c9a96e"/>
           <path d="M47 46 Q50 49 53 46" stroke="#c9a96e" stroke-width="1" fill="none"/>
-          <!-- Middle doll -->
-          <path d="M32 72 C32 48 38 36 50 32 C62 36 68 48 68 72 Z" fill="url(#grad1)" stroke="#c9a96e" stroke-width="1" opacity="0.85"/>
-          <circle cx="50" cy="48" r="9" fill="url(#grad2)" stroke="#c9a96e" stroke-width="0.8"/>
+          <path d="M32 72 C32 48 38 36 50 32 C62 36 68 48 68 72 Z" fill="url(#g1)" stroke="#c9a96e" stroke-width="1" opacity="0.85"/>
+          <circle cx="50" cy="48" r="9" fill="url(#g2)" stroke="#c9a96e" stroke-width="0.8"/>
           <circle cx="46" cy="49" r="1.2" fill="#c9a96e"/>
           <circle cx="54" cy="49" r="1.2" fill="#c9a96e"/>
           <path d="M48 53 Q50 55 52 53" stroke="#c9a96e" stroke-width="0.8" fill="none"/>
-          <!-- Inner doll -->
-          <path d="M40 62 C40 50 44 44 50 42 C56 44 60 50 60 62 Z" fill="url(#grad1)" stroke="#c9a96e" stroke-width="0.8" opacity="0.7"/>
-          <circle cx="50" cy="54" r="5" fill="url(#grad2)" stroke="#c9a96e" stroke-width="0.6"/>
+          <path d="M40 62 C40 50 44 44 50 42 C56 44 60 50 60 62 Z" fill="url(#g1)" stroke="#c9a96e" stroke-width="0.8" opacity="0.7"/>
+          <circle cx="50" cy="54" r="5" fill="url(#g2)" stroke="#c9a96e" stroke-width="0.6"/>
           <circle cx="48" cy="54.5" r="0.8" fill="#c9a96e"/>
           <circle cx="52" cy="54.5" r="0.8" fill="#c9a96e"/>
           <defs>
-            <linearGradient id="grad1" x1="0" y1="0" x2="0" y2="1">
+            <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stop-color="#8b1a3a"/>
               <stop offset="100%" stop-color="#5a1025"/>
             </linearGradient>
-            <linearGradient id="grad2" x1="0" y1="0" x2="0" y2="1">
+            <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stop-color="#f0e6d0"/>
               <stop offset="100%" stop-color="#c9a96e"/>
             </linearGradient>
@@ -519,13 +466,10 @@
       </div>
     </a>
     <div class="topbar-right">
-      <div class="hamburger" id="hamburger">
-        <div></div><div></div><div></div>
-      </div>
+      <div class="hamburger" id="hamburger"><div></div><div></div><div></div></div>
     </div>
   </header>
 
-  <!-- MOBILE MENU -->
   <nav class="nav-overlay" id="navOverlay">
     <div style="position:absolute;top:20px;right:24px;cursor:pointer;font-size:1.8rem;color:var(--text);" onclick="toggleMenu()">&times;</div>
     <a href="#about" onclick="toggleMenu()">О нас</a>
@@ -536,11 +480,9 @@
     <a href="https://dikidi.net/1811715?p=0.pi" target="_blank" onclick="toggleMenu()" style="color:var(--gold);">Онлайн-запись</a>
   </nav>
 
-
-       <!-- HERO -->
   <section class="hero-section">
     <div class="hero-bg"></div>
-       <div class="hero-content fade-in">
+    <div class="hero-content fade-in">
       <h1>Матрёшка<br>Салон красоты в Краснодаре</h1>
       <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
         <a href="https://wa.me/79186919939" target="_blank" class="btn-main btn-fill">
@@ -554,8 +496,7 @@
       </div>
     </div>
 
-
-        <div class="hero-side-btns">
+    <div class="hero-side-btns">
       <a href="https://wa.me/79186919939" target="_blank" class="hero-side-btn hero-side-wa">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
       </a>
@@ -563,8 +504,8 @@
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
       </a>
     </div>
+  </section>
 
-  <!-- ABOUT -->
   <div class="section" id="about">
     <div class="section-header fade-in">
       <div class="section-label">О нас</div>
@@ -581,7 +522,6 @@
     </div>
   </div>
 
-  <!-- RATINGS -->
   <div class="section">
     <div class="section-header fade-in">
       <div class="section-label">Рейтинги</div>
@@ -598,7 +538,6 @@
     </div>
   </div>
 
-  <!-- PRICES -->
   <div class="section" id="prices">
     <div class="section-header fade-in">
       <div class="section-label">Прайс</div>
@@ -606,7 +545,6 @@
       <div class="divider"></div>
     </div>
     <div class="price-wrap fade-in">
-      <!-- Manicure -->
       <div class="price-box">
         <h3>Маникюр</h3>
         <div class="price-row"><span class="price-name">Наращивание ногтей</span><span class="price-val">2 200 ₽</span></div>
@@ -617,7 +555,6 @@
         <div class="price-row"><span class="price-name">Снятие ногтей без маникюра</span><span class="price-val">500 ₽</span></div>
         <div class="price-note">В стоимость входит комби-маникюр, длина до 3ки, однотонное покрытие. Длина выше 3ки +100 ₽ за последующую единицу</div>
       </div>
-      <!-- Pedicure -->
       <div class="price-box">
         <h3>Педикюр</h3>
         <div class="price-row"><span class="price-name">Smart-педикюр (обработка стоп без покрытия)</span><span class="price-val">1 700 ₽</span></div>
@@ -627,7 +564,6 @@
       </div>
     </div>
 
-    <!-- Master Maria -->
     <div class="master-highlight fade-in">
       <h3>Мастер Мария</h3>
       <div class="sub">Прайс топ-мастера</div>
@@ -645,7 +581,6 @@
     </div>
   </div>
 
-  <!-- PORTFOLIO -->
   <div class="section" id="portfolio">
     <div class="section-header fade-in">
       <div class="section-label">Портфолио</div>
@@ -679,7 +614,6 @@
       </div>
     </div>
   </div>
-  <!-- REVIEWS -->
   <div class="section" id="reviews">
     <div class="section-header fade-in">
       <div class="section-label">Отзывы</div>
@@ -692,7 +626,7 @@
           <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--bordeaux),var(--gold));display:grid;place-items:center;color:#fff;font-weight:600;font-size:0.9rem;flex-shrink:0;">ВШ</div>
           <div><div style="font-weight:600;font-size:0.95rem;color:#fff;">Виктория Шевченко</div><div style="color:var(--gold);font-size:0.85rem;letter-spacing:1px;">★★★★★</div></div>
         </div>
-        <p style="color:var(--text-soft);font-size:0.92rem;line-height:1.7;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1.05rem;">Девочки, это лучший салон!! Хожу с мамой сюда постоянно, делаем и маникюр, и педикюр, девочки-мастера очень милые и комфортные, а главное знают свое дело! На фото мой крайний маникюр у мастера Марии, это просто 🔥🔥🔥</p>
+        <p style="color:var(--text-soft);line-height:1.7;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1.05rem;">Девочки, это лучший салон!! Хожу с мамой сюда постоянно, делаем и маникюр, и педикюр, девочки-мастера очень милые и комфортные, а главное знают свое дело! На фото мой крайний маникюр у мастера Марии, это просто 🔥🔥🔥</p>
         <div style="margin-top:14px;font-size:0.78rem;color:#666;font-weight:500;">Вчера</div>
       </div>
       <div style="flex:0 0 340px;scroll-snap-align:start;background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:var(--radius-sm);padding:32px;transition:0.3s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
@@ -700,7 +634,7 @@
           <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--bordeaux),var(--gold));display:grid;place-items:center;color:#fff;font-weight:600;font-size:0.9rem;flex-shrink:0;">АВ</div>
           <div><div style="font-weight:600;font-size:0.95rem;color:#fff;">Александра Влас</div><div style="color:var(--gold);font-size:0.85rem;letter-spacing:1px;">★★★★★</div></div>
         </div>
-        <p style="color:var(--text-soft);font-size:0.92rem;line-height:1.7;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1.05rem;">Хожу в этот салон на постоянной основе и всегда остаюсь довольна! Мастера выполняют всё аккуратно, помогают с выбором дизайна, инструмент стерильный. Отдельно отмечу количество и качество материалов, покрытие держится без проблем. Соотношение цены и качества на высоте. Рекомендую</p>
+        <p style="color:var(--text-soft);line-height:1.7;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1.05rem;">Хожу в этот салон на постоянной основе и всегда остаюсь довольна! Мастера выполняют всё аккуратно, помогают с выбором дизайна, инструмент стерильный. Отдельно отмечу количество и качество материалов, покрытие держится без проблем. Соотношение цены и качества на высоте. Рекомендую</p>
         <div style="margin-top:14px;font-size:0.78rem;color:#666;font-weight:500;">22 июля 2026</div>
       </div>
       <div style="flex:0 0 340px;scroll-snap-align:start;background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:var(--radius-sm);padding:32px;transition:0.3s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
@@ -708,7 +642,7 @@
           <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--bordeaux),var(--gold));display:grid;place-items:center;color:#fff;font-weight:600;font-size:0.9rem;flex-shrink:0;">ТК</div>
           <div><div style="font-weight:600;font-size:0.95rem;color:#fff;">Татьяна Крамаренко</div><div style="color:var(--gold);font-size:0.85rem;letter-spacing:1px;">★★★★★</div></div>
         </div>
-        <p style="color:var(--text-soft);font-size:0.92rem;line-height:1.7;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1.05rem;">Это просто потрясающий салон, с работниками которые мастера своего дела. Мария это просто фея ногтей 🧚 Всегда приятно посещать данный салон: кофе угостят, невероятной красоты ногти сделают и можно все новости обсудить. Очень хотела попасть к Марии и не разу не пожалела что выбрала именно ее 🙏</p>
+        <p style="color:var(--text-soft);line-height:1.7;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1.05rem;">Это просто потрясающий салон, с работниками которые мастера своего дела. Мария это просто фея ногтей 🧚 Всегда приятно посещать данный салон: кофе угостят, невероятной красоты ногти сделают и можно все новости обсудить. Очень хотела попасть к Марии и не разу не пожалела что выбрала именно ее 🙏</p>
         <div style="margin-top:14px;font-size:0.78rem;color:#666;font-weight:500;">13 июля 2026</div>
       </div>
       <div style="flex:0 0 340px;scroll-snap-align:start;background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:var(--radius-sm);padding:32px;transition:0.3s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
@@ -716,7 +650,7 @@
           <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--bordeaux),var(--gold));display:grid;place-items:center;color:#fff;font-weight:600;font-size:0.9rem;flex-shrink:0;">ЕЩ</div>
           <div><div style="font-weight:600;font-size:0.95rem;color:#fff;">Евгения Щипелева</div><div style="color:var(--gold);font-size:0.85rem;letter-spacing:1px;">★★★★★</div></div>
         </div>
-        <p style="color:var(--text-soft);font-size:0.92rem;line-height:1.7;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1.05rem;">Хожу в этот салон на протяжении нескольких лет к мастеру Марии, маникюр отличный, всегда держится отлично, дизайны любой сложности, все мои идеи воплощают на ногтях. Сервис отличный, уютная атмосфера, вежливые и приятные мастера</p>
+        <p style="color:var(--text-soft);line-height:1.7;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1.05rem;">Хожу в этот салон на протяжении нескольких лет к мастеру Марии, маникюр отличный, всегда держится отлично, дизайны любой сложности, все мои идеи воплощают на ногтях. Сервис отличный, уютная атмосфера, вежливые и приятные мастера</p>
         <div style="margin-top:14px;font-size:0.78rem;color:#666;font-weight:500;">18 июля 2026</div>
       </div>
       <div style="flex:0 0 340px;scroll-snap-align:start;background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:var(--radius-sm);padding:32px;transition:0.3s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
@@ -724,7 +658,7 @@
           <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--bordeaux),var(--gold));display:grid;place-items:center;color:#fff;font-weight:600;font-size:0.9rem;flex-shrink:0;">Ю</div>
           <div><div style="font-weight:600;font-size:0.95rem;color:#fff;">Юлия</div><div style="color:var(--gold);font-size:0.85rem;letter-spacing:1px;">★★★★★</div></div>
         </div>
-        <p style="color:var(--text-soft);font-size:0.92rem;line-height:1.7;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1.05rem;">На протяжении 2-х лет делаю в этой студии маникюр и педикюр у Тамары и очень довольна результатом — профессионально, аккуратно, качественно и красиво! ❤️‍🔥</p>
+        <p style="color:var(--text-soft);line-height:1.7;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1.05rem;">На протяжении 2-х лет делаю в этой студии маникюр и педикюр у Тамары и очень довольна результатом — профессионально, аккуратно, качественно и красиво! ❤️‍🔥</p>
         <div style="margin-top:14px;font-size:0.78rem;color:#666;font-weight:500;">16 июля 2026</div>
       </div>
       <div style="flex:0 0 340px;scroll-snap-align:start;background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:var(--radius-sm);padding:32px;transition:0.3s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
@@ -732,7 +666,7 @@
           <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--bordeaux),var(--gold));display:grid;place-items:center;color:#fff;font-weight:600;font-size:0.9rem;flex-shrink:0;">ВТ</div>
           <div><div style="font-weight:600;font-size:0.95rem;color:#fff;">Виктория Трифонова</div><div style="color:var(--gold);font-size:0.85rem;letter-spacing:1px;">★★★★★</div></div>
         </div>
-        <p style="color:var(--text-soft);font-size:0.92rem;line-height:1.7;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1.05rem;">Хожу к Марии уже около 6 лет, очень нравится её подход к людям, делает ногти просто мастерски, не знаешь какой дизайн — всегда поможет и подскажет в выборе. В общем я довольна, 100 из 100 💗</p>
+        <p style="color:var(--text-soft);line-height:1.7;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1.05rem;">Хожу к Марии уже около 6 лет, очень нравится её подход к людям, делает ногти просто мастерски, не знаешь какой дизайн — всегда поможет и подскажет в выборе. В общем я довольна, 100 из 100 💗</p>
         <div style="margin-top:14px;font-size:0.78rem;color:#666;font-weight:500;">18 июля 2026</div>
       </div>
     </div>
@@ -744,7 +678,6 @@
     </div>
   </div>
 
-    <!-- CONTACTS -->
   <div class="section" id="contacts">
     <div class="section-header fade-in">
       <div class="section-label">Контакты</div>
@@ -789,22 +722,17 @@
     </div>
   </div>
 
-
-
-  <!-- FOOTER -->
   <footer style="text-align:center;padding:48px 28px;color:var(--text-soft);font-size:0.8rem;letter-spacing:1px;border-top:1px solid var(--glass-border);">
     <p>&copy; 2026 Матрёшка &bull; Салон красоты в Краснодаре</p>
     <p style="margin-top:6px;">Рейтинг 5.0 &bull; 29 оценок &bull; <a href="tel:+79186919939" style="color:var(--gold);text-decoration:none;">+7 (918) 691-99-39</a></p>
   </footer>
 
-  <!-- LIGHTBOX -->
   <div id="lightbox" style="position:fixed;inset:0;background:rgba(13,11,20,0.96);backdrop-filter:blur(10px);z-index:2000;display:none;place-items:center;" onclick="closeBox()">
     <button style="position:absolute;top:24px;right:24px;width:48px;height:48px;border-radius:50%;background:var(--glass);border:1px solid var(--glass-border);color:var(--text);font-size:1.4rem;display:grid;place-items:center;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.2);" onclick="closeBox()">&times;</button>
     <img id="lbImg" src="" alt="" style="max-width:88vw;max-height:82vh;border-radius:var(--radius-sm);box-shadow:0 20px 60px rgba(0,0,0,0.5);">
   </div>
 
   <script>
-    // MENU
     const ham = document.getElementById('hamburger');
     const nav = document.getElementById('navOverlay');
     let menuOpen = false;
@@ -817,7 +745,6 @@
       nav.classList.remove('show');
     }
 
-    // SCROLL REVEAL
     const faders = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry, i) => {
@@ -829,7 +756,6 @@
     }, { threshold: 0.1 });
     faders.forEach(el => observer.observe(el));
 
-    // LIGHTBOX
     function openBox(src) {
       document.getElementById('lbImg').src = src;
       document.getElementById('lightbox').style.display = 'grid';
